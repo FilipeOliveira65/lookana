@@ -1,0 +1,117 @@
+app-new-service-window {
+    position: fixed;
+    top: 0;
+
+    z-index: 999;
+}
+
+.monitoring-area {
+    height: 100vh;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .app-monitor-block {
+        min-height: 80px;
+        width: 350px;
+    
+        background-color: #019c01;
+
+        margin-right: 10px;
+
+        border: 0 solid;
+        border-radius: 10px;
+
+        .service-details {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            padding: 10px;
+
+            background-color: #004280;
+            color: #fff;
+
+            border: 0 solid;
+            border-radius: 10px 10px 0 0;
+
+            .service-logo {
+                width: 60px;
+                height: 60px;
+
+                margin-right: 10px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-color: #ffffff96;
+                
+                border-radius: 10px;
+                border-width: 0;
+                border-style: solid;
+            }
+
+            .service-name-details {
+                .service-name {
+                    font-size: 30px;
+                    line-height: 1;
+                    margin: 0;
+                }
+    
+                .service-dns {
+                    min-width: 80%;
+    
+                    font-size: 18px;
+                }
+            }
+
+        }
+
+        .service-status {
+            padding: 10px;
+
+            h1 {
+                vertical-align: top;
+                color: #cbe0cb;
+
+                line-height: 1;
+                margin: 0;
+            }
+
+            .last-ping {
+                font-size: 14px;
+                color: #cbe0cb;
+            }
+        }
+    }
+
+    #add-new-service {
+        height: 40px;
+        width: 150px;
+
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 0 solid transparent;
+        border-radius: 10px;
+
+        background-color: #3800bb;
+        color: #e7e0f7;
+
+        font-weight: bold;
+
+        span {
+            justify-content: space-between;
+        }
+    }
+}
