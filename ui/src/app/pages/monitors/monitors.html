@@ -1,4 +1,7 @@
-<app-new-service-window></app-new-service-window>
+<app-new-service-window
+    [visible]="newServiceWindowIsVisible"
+>   
+</app-new-service-window>
 
 <main class="monitoring-area">
     <div class="app-monitor-block">
@@ -24,7 +27,9 @@
         </div>
     </div>
 
-    <button id="add-new-service">
+    <button 
+        id="add-new-service"
+        (click)="openNewServiceWindow()">
         <span class="material-symbols-outlined">
         add
         </span>

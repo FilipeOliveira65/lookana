@@ -24,7 +24,7 @@ app-new-service-window {
         margin-right: 10px;
 
         border: 0 solid;
-        border-radius: 10px;
+        border-radius: 5px;
 
         .service-details {
             display: flex;
@@ -37,7 +37,7 @@ app-new-service-window {
             color: #fff;
 
             border: 0 solid;
-            border-radius: 10px 10px 0 0;
+            border-radius: 5px 5px 0 0;
 
             .service-logo {
                 width: 60px;
@@ -51,7 +51,7 @@ app-new-service-window {
 
                 background-color: #ffffff96;
                 
-                border-radius: 10px;
+                border-radius: 5px;
                 border-width: 0;
                 border-style: solid;
             }
@@ -103,7 +103,7 @@ app-new-service-window {
         justify-content: center;
 
         border: 0 solid transparent;
-        border-radius: 10px;
+        border-radius: 5px;
 
         background-color: #3800bb;
         color: #e7e0f7;

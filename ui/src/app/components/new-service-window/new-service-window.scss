@@ -8,6 +8,10 @@
 
     background-color: #00000055;
 
+    #new-service-header,
+    #new-service-body {
+            margin-bottom: 20px;
+        }   
     #new-service-modal {
         min-height: 10vh;
         width: 40vw;
@@ -16,21 +20,24 @@
 
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
 
         background-color: #e7e0f9;
         color: #050011;
 
         border: 0 solid transparent;
-        border-radius: 10px;
+        border-radius: 5px;
 
         #new-service-header {
             h1 {
-                background-color: #0500111a;
+                max-width: 300px;
+
+                // background-color: #0500111a;
 
                 padding: 5px 10px;
 
-                border-radius: 10px;
+                border-radius: 5px;
 
                 line-height: 1;
                 margin: 0;
@@ -38,11 +45,56 @@
         }
 
         #new-service-body {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             form {
+                width: 80%;
+
                 display: flex;
                 justify-content: center;
-                // align-items: center;
                 flex-direction: column;
+
+                input {
+                    height: 35px;
+
+                    border: 0 solid transparent;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        #new-service-footer {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: row;
+
+            button {
+                height: 40px;
+                width: 150px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                border: 0 solid transparent;
+                border-radius: 5px;
+
+                background-color: #3800bb;
+                color: #e7e0f7;
+
+                font-weight: bold;
+            }
+
+            button#cancel-service-creation {
+                background-color: transparent;
+                color: #3800bb;
             }
         }
     }

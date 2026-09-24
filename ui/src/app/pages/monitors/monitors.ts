@@ -9,4 +9,10 @@ import { NewServiceWindow } from '../../components/new-service-window/new-servic
   templateUrl: './monitors.html',
   styleUrl: './monitors.scss',
 })
-export class Monitors {}
+export class Monitors {
+  newServiceWindowIsVisible = false;
+
+  openNewServiceWindow(): void {
+    this.newServiceWindowIsVisible = true;
+  }
+}
