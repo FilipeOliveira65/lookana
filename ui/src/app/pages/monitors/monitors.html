@@ -1,5 +1,6 @@
 <app-new-service-window
     [visible]="newServiceWindowIsVisible"
+    (closeWindow)="newServiceWindowIsVisible = $event"
 >   
 </app-new-service-window>
 

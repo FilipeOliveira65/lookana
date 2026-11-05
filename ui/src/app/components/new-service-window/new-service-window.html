@@ -7,8 +7,8 @@
                 </h1>
             </div>
             <div id="new-service-body">
-                <form 
-                    action="" 
+                <form
+                    [formGroup]="serviceForm"
                     id="new-service-data">
                     <label for="service-name">
                         Service name:
@@ -16,6 +16,7 @@
                     <input 
                         type="text" 
                         name="service-name" 
+                        formControlName="serviceName"
                         id="service-name">
 
                     <label for="service-name">
@@ -24,6 +25,7 @@
                     <input 
                         type="text" 
                         name="service-dns" 
+                        formControlName="serviceDns"
                         id="service-dns">
                 </form>
             </div>
@@ -33,7 +35,8 @@
                     (click)="closeNewServiceWindow()">
                     Cancel
                 </button>
-                <button>
+                <button
+                    (click)="createNewService()">
                     Create
                 </button>
             </div>

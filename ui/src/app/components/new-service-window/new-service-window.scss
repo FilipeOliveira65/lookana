@@ -12,9 +12,10 @@
     #new-service-body {
             margin-bottom: 20px;
         }   
+
     #new-service-modal {
         min-height: 10vh;
-        width: 40vw;
+        width: 30vw;
 
         padding: 10px;
 
@@ -32,8 +33,6 @@
         #new-service-header {
             h1 {
                 max-width: 300px;
-
-                // background-color: #0500111a;
 
                 padding: 5px 10px;
 
@@ -61,8 +60,15 @@
                 input {
                     height: 35px;
 
+                    margin-bottom: 10px;
+                    padding: 5px;
+
                     border: 0 solid transparent;
                     border-radius: 5px;
+
+                    font-size: 14px;
+
+                    outline: solid 1px #3800bb;
                 }
             }
         }

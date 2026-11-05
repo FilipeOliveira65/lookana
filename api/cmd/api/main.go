@@ -1,25 +1,41 @@
 package main
 
 import (
-	"fmt"
+	"github.com/FilipeOliveira65/lookana/internal/handlers"
+	"github.com/rs/cors"
 
-	"github.com/FilipeOliveira65/lookana/internal/monitor"
+	// "github.com/rs/cors"
+
+	"log"
+	"net/http"
 )
 
 func main() {
-	dnsList := []string{
-		"google.com", "facebook.com", "spaces.live.com",
-	}
+	mux := http.NewServeMux()
 
-	var counter int = 0
+	mux.HandleFunc("/create-service", handlers.CreateService)
+	mux.HandleFunc("/check-service", handlers.PingService)
 
-	for counter < len(dnsList) {
-		var dnsToAnalyse = dnsList[counter]
+	c := cors.New(cors.Options{
+		AllowedOrigins: []string{
+			"http://localhost:4200",
+		},
+		AllowedMethods: []string{
+			http.MethodGet,
+			http.MethodPost,
+			http.MethodPut,
+			http.MethodDelete,
+			http.MethodOptions,
+		},
+		AllowedHeaders: []string{
+			"Content-Type",
+			"Authorization",
+		},
+		AllowCredentials: true,
+	})
 
-		var dnsConsultResult = monitor.PingMonitor(dnsToAnalyse)
+	handler := c.Handler(mux)
 
-		fmt.Printf("Service name: %s\nService status: %s\n------------\n", dnsConsultResult.ServiceName, dnsConsultResult.ServiceStatus)
-
-		counter += 1
-	}
+	log.Println("Server running on http://localhost:8080")
+	log.Fatal(http.ListenAndServe(":8080", handler))
 }
