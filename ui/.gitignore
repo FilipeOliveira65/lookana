@@ -44,5 +44,5 @@ __screenshots__/
 Thumbs.db
 
 # Docker Compose
-docker-compose.yml
-docker-compose.yaml
+**/docker-compose.yml
+**/docker-compose.yaml
