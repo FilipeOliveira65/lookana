@@ -22,8 +22,9 @@ func CreateService(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Invalid JSON.", http.StatusBadRequest)
 	}
 
+	fmt.Println(newService
+	)
 	fmt.Println("Reached here")
-	fmt.Println(newService)
 }
 
 func PingService(w http.ResponseWriter, r *http.Request) {
