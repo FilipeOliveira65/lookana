@@ -7,7 +7,7 @@ ui/out-tsc
 ui/bazel-out
 
 # Node
-ui/node_modules
+/ui/node_modules
 ui/npm-debug.log
 ui/yarn-error.log
 
@@ -44,5 +44,5 @@ ui/.DS_Store
 ui/Thumbs.db
 
 # Docker Compose
-docker-compose.yml
-./docker-compose.yaml
+/docker-compose.yml
+/docker-compose.yaml
